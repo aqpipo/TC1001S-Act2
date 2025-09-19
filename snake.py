@@ -14,9 +14,12 @@ from turtle import *
 from freegames import square, vector
 
 
-
+#Variables globales que contienen un numero random del 1 al 4
 snake_random_color = randrange(5)
 food_random_color = randrange(5)
+
+
+#variables globales que contienen el color de la serpiente y la comida
 snake_color = ''
 food_color = ''
 
@@ -25,7 +28,6 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
-FOOD_DIRS = [vector(10, 0), vector(-10, 0), vector(0, 10), vector(0, -10)]
 
 
 def change(x, y):
@@ -37,20 +39,6 @@ def change(x, y):
 def inside(head):
     """Return True if head inside boundaries."""
     return -200 < head.x < 190 and -200 < head.y < 190
-
-def step_food():
-    """Move food randomly one step without leaving the window."""
-    candidates = []
-    for d in FOOD_DIRS:
-        nxt = p = food.copy()
-        nxt.move(d)
-        if inside(nxt):
-            candidates.append(nxt)
-
-    if candidates:
-        nxt = choice(candidates)
-        food.x, food.y = nxt.x, nxt.y
-
 
 
 def move():
@@ -72,8 +60,6 @@ def move():
     else:
         snake.pop(0)
 
-    step_food()
-
     clear()
 
     for body in snake:
@@ -82,6 +68,9 @@ def move():
     square(food.x, food.y, 9, food_color)
     update()
     ontimer(move, 100)
+
+
+#Asignacion de colores
 
 
 if snake_random_color == 0:
