@@ -14,9 +14,12 @@ from turtle import *
 from freegames import square, vector
 
 
-
+#Variables globales que contienen un numero random del 1 al 4
 snake_random_color = randrange(5)
 food_random_color = randrange(5)
+
+
+#variables globales que contienen el color de la serpiente y la comida 
 snake_color = ''
 food_color = ''
 
@@ -40,11 +43,7 @@ def inside(head):
 
 def move():
 
-    #randomizar color
-
-
-
-
+    
     """Move snake forward one segment."""
     head = snake[-1].copy()
     head.move(aim)
@@ -74,7 +73,7 @@ def move():
 
 
 
-
+#Asignacion del color de la serpiente y comida
 
 if snake_random_color == 0:
     snake_color = 'blue'
