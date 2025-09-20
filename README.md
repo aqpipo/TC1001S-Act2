@@ -2,5 +2,16 @@
 # TC1001S-Act2
 Snake Game
 =======
-En esta versión cada que se inicializa el juego, la serpiente y la comida tomaran un color aleatorio. Ademas se incluye que la comida podrá moverse al azar un paso a la vez, a la vez que no debe salirse de la pantalla. 
+
+- Santiago Escalante López (A01661008)
+- Alejandro Quintana Cervantes (A01669234)
+
+Descripción
+Juego clásico de Snake implementado en Python usando `turtle`.
+
+Cambios principales:
+- Al iniciar, la serpiente y la comida toman un color aleatorio entre 5 posibles opciones.
+- La comida se mueve al azar un paso a la vez.
+- La comida nunca debe salirse de la pantalla.
+ 
 >>>>>>> c88a002 (Se agrego la randomización de colores)
